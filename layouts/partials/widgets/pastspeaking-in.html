@@ -1,0 +1,78 @@
+{{ $ := .root }}
+{{ $page := .page }}
+<div class="container">
+    {{ with $page.Title }}
+    <div class="tabhead"><h2>{{ with $page.Title }}{{ . | markdownify }}{{ end }}</h2></div> 
+    {{ end }}
+
+    <br>
+    <div class="row">
+        <div class="col-md-5">
+           <h3 class="h2_heading">Upcoming speaking appearances</h3>
+           <div class="lanyrd-splat"><a class="lanyrd-template-standard" href="http://lanyrd.com/profile/shah/" rel="me external noopener noreferrer" data-wpel-link="external" target="_blank">See my conferences on Lanyrd</a> </div>
+        </div>
+        <div class="col-md-7">
+            <h3 class="h2_heading">Invite me to speak at your event</h3>
+            <form id="speak-schedule-form" class="sh-generic-form" action="https://formspree.io/jayakrishnan.s@netspective.org" method="POST">
+                <div class="form-group sp-form-div">
+
+                    <input type="text" name="full_name" class="form-control sp-input" id="speak-schedule-name" placeholder="Full Name (required)" required>
+                    
+                  </div>
+                <div class="form-group sp-form-div">
+                 
+                  <input type="email" name="event_email" email="email" class="form-control sp-input" id="speak-schedule-email" placeholder="Email (required)" required>
+                  
+                </div>
+                <div class="form-group sp-form-div">
+                    
+                    <input type="text" name="event_name" class="form-control sp-input" id="speak-schedule-event-name" placeholder="Event Name">
+                    
+                </div>
+                <div class="form-group sp-form-div">
+                    
+                    <input type="text" name="event_location" class="form-control sp-input" id="speak-schedule-event-location" placeholder="Event Location">
+                    
+                </div>
+                <div class="form-group sp-form-div">
+                    <textarea name="event_details" id="speak-schedule-event-description" class="form-control sp-inout" placeholder="Event Details"></textarea>
+                    
+                </div>
+                <div class="sh-generic-submit">
+                  <button id="speak-schedule-submit-btn" name="submit" type="submit" class="btn btn-primary sp-submit">
+                      <span class="spinner-border spinner-border-sm sh-btn-loader sh-hide-element" role="status" aria-hidden="true"></span>      
+                    <span id="sh-btn-text">Send</span>
+                  </button>
+                </div>             
+              </form>
+              <div id="speak-schedule-success" class="alert alert-success sh-hide-element sh-alert-success" role="alert">
+                <strong>Thank you!</strong> Your invitation  has been successfully sent.
+              </div>
+     </div>
+
+
+
+
+    <div class="row">
+    {{ with $page.Content }}
+    <div class="col-md-12">
+      {{ . }}
+    </div>
+    {{ end }}
+    {{ range $page.Params.item }}
+      <div class="col-sm-6">               
+                <div class="media_coverage_new_wrapper">
+                    <div class="media_coverage_new_logo_container"><p><img class="img-responsive" src="{{ .Logo }}"></p></div>
+                    <div class="media_coverage_new_txt_container">
+                        <p class="media_coverage_heading_p">
+                            <a target="_blank" href="{{ .Link }}" data-wpel-link="external" rel="external noopener noreferrer">{{ .Title }}</a>
+                        </p>
+                        <p class="media_coverage_date_p">{{ .Place }}</p>
+                        <p class="media_coverage_date_p">{{ .Date }}</p>
+                    </div> 
+                </div>                   
+            </div>
+    {{ end }}
+  </div>
+</div>
+

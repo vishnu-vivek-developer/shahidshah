@@ -1,0 +1,308 @@
+.tabhead {
+  text-align: center;
+}
+.more-view {
+  text-align: center;
+}
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+.tab button:hover {
+  background-color: #ddd;
+}
+.tab button.active {
+  background-color: #ccc;
+}
+.tabcontent {
+  display: none;
+  
+}
+.tabExp {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+.tabExp button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+.tabExp button:hover {
+  background-color: #ddd;
+}
+.tabExp button.active {
+  background-color: #ccc;
+}
+
+.tabcontentExp {
+  display: none; 
+}
+.tab {
+    text-align: center;
+}
+.card-body {
+    text-align: center;
+}
+.more-view {
+    text-align: center;
+    background: #e0e0e0;
+    padding: 10px;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.more-view a {
+    color: #a62229;
+}
+.more-view a:hover {
+    color: #000;
+}
+.tabcontent .row, .tabcontentExp .row {
+    margin-top: 0px;
+    padding-top: 25px;
+    border-top: 1px solid #d5d5d5;
+}
+.media-member {
+    background: #fff;
+    margin-bottom: 15px;
+}
+.tabcontent .col-md-3 strong, .tabcontentExp .col-md-3 strong {
+    line-height: 20px;
+    font-size: 14px;
+    color: rgba(0,0,0,.85);
+    display: inline-block;
+    margin-bottom: 5px;
+}
+.tabcontent .col-md-3 p, .tabcontentExp .col-md-3 p {
+    color: #6f6f6f;
+    margin-bottom: 5px;
+}
+.tabcontent .col-md-8 p, .tabcontentExp .col-md-8 p {
+    color: #000;
+    font-size: 15px;
+}
+.tabcontent .col-md-3 span, .tabcontentExp .col-md-3 span {
+    color: #6f6f6f;
+    line-height: 17px !important;
+    font-size: 13px;
+    display: block;
+}
+.tabcontent .row, .tabcontentExp .row {
+    margin-top: 0px;
+    padding-top: 25px;
+    border-top: 1px solid #d5d5d5;
+    font-size: 15px;
+}
+.card-title.exp-title.text-muted.my-0 {
+    font-size: initial;
+}
+
+/* media coverage starts */
+.media_coverage_wrapper {
+    border: 1px solid #d7d7d7;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    height: 185px;
+}
+.media_coverage_icon_container {
+    width: 100%;
+    border-bottom:1px solid #d7d7d7;
+    background: #efefef;
+}
+.media_coverage_icon_p {
+    padding: 5px;
+    margin: 0px;
+    color: #333;
+}
+.media_coverage_txt_container {
+    width: 100%;
+    margin: 0px;
+}
+
+/* media coverage and past speaking appearences starts*/
+.media_coverage_new_wrapper {
+    width: 100%;
+    border: 1px solid #cccccc;
+    margin: 15px 0px 10px 0px;
+    float: left;
+}
+.media_coverage_new_logo_container {
+    width: 30%;
+    float: left;
+}
+.media_coverage_new_txt_container {
+    width: 70%;
+    float: left;
+    background-color: #ebebeb;
+    min-height: 130px;
+}
+.media_coverage_heading_p {
+    font-size: 15px;
+    color: #333333;
+    padding: 5px;
+    margin: 0px;
+}
+.media_coverage_heading_p a {
+    color: #3e0b00;
+}
+.media_coverage_heading_p a:hover {
+    color: #000;
+}
+.media_coverage_date_p {
+    font-size: 12px;
+    color: #888;
+    padding: 0px 5px 5px 5px;
+    margin: 0px;
+}
+.media_coverage_date_p {
+    font-size: 12px;
+    color: #888;
+    padding: 0px 5px 5px 5px;
+    margin: 0px;
+}
+.media_coverage_icon_p span {
+    display: inline-block;
+    padding-left: 5px;
+}
+.img-responsive {
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+/* spacing in list of posts*/
+.media.stream-item {
+    margin-bottom: 0rem;
+}
+footer {
+    margin: 2rem 0 0;
+}
+#about {
+    padding-bottom: 40px;
+}
+.table-txt-1 {
+    font-size: 13px;
+    margin-top: 25px;
+}
+h1 {
+    font-size: 1.5rem;
+}
+
+/*PK 21-04-2020 VV*/
+
+footer p {
+    text-align: left !important;
+}
+ .gallery-grid-img {
+    width: 170px;
+    height: 170px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+body {
+    font-family:-apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,noto sans,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol,noto color emoji!important;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: -apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,noto sans,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol,noto color emoji!important;
+}
+.navbar-nav { font-family: -apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,noto sans,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol,noto color emoji!important;
+}
+.navbar-light .navbar-brand {
+    font-family: -apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,noto sans,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol,noto color emoji!important;
+}
+.portrait-title h2, .portrait-title h3 {
+    font-weight: 400!important;
+}
+footer.page-footer {
+    margin: 0rem;
+    padding-top: 0rem;
+}
+.footer-copyright {
+    font-size: .75rem;
+    border-top: 1px solid #dbdbdb;
+}
+.sp-input{
+    height: 30px;
+    font-size: 12px;
+    line-height: 1.5;
+    border-radius: 3px;
+}
+
+.sh-generic-form input, select, textarea {
+    border-radius: 0px!important;
+    padding: 5px 10px 7px 10px!important;
+    height: inherit!important;
+    font-size: 15px!important;
+}
+.sh-generic-form .form-control:focus {
+    box-shadow: 0 0 0 0.01rem #da1703!important;
+}
+.sh-generic-submit {
+    text-align: right;
+    margin-bottom: 20px;
+    margin-top: -10px;
+}
+.sp-submit {
+    border: 0px!important;
+    border-radius: 0px!important;
+    line-height: inherit!important;
+    height: inherit!important;
+    text-transform: uppercase;
+    padding: 3px 15px 4px 15px!important;
+}
+.btn-primary.sp-submit:focus, .btn-primary.sp-submit.focus {
+    box-shadow: 0 0 0 0rem rgba(181,54,40,.5)!important;
+}
+.fa-skype {
+    font-size:21px!important;
+}
+.member-photo img {
+    display: inline-block!important;
+}
+.more-view {
+    display: inline-block;
+    width: 250px;
+    margin-top: 15px;
+}
+.footer-scetion-row {
+    padding-top: 10px;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#f8f8f8+0,f2f2f2+43,ededed+100 */
+    background: #f6f6f6; /* Old browsers */
+    background: -moz-linear-gradient(top,  #f8f8f8 0%, #f2f2f2 43%, #ededed 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #f8f8f8 0%,#f2f2f2 43%,#ededed 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #ff8f8f8 0%,#f2f2f2 43%,#ededed 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff8f8f8', endColorstr='#ededed',GradientType=0 ); /* IE6-9 */
+}
+.tabcontent .row, .tabcontentExp .row {
+    padding-bottom:20px;
+}
+.sh-hide-element{
+    display: none;
+}
+.sh-alert-success{
+    padding: 5px 20px !important;
+    font-size: 16px !important;
+}
+#customer-contact-success{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.error {
+    color:#bb0d0d;
+    font-size: 15px;
+    margin-bottom: 0px;
+    /* padding: 0px 0px 0px; */
+}
+/*PK 21-04-2020 VV*/

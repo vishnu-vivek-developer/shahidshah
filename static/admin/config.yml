@@ -1,0 +1,233 @@
+backend:
+  name: git-gateway
+
+media_folder: "static/img" # Folder where user uploaded files should go
+public_folder: "img"
+
+collections: # A list of collections the CMS should be able to edit
+  - name: "post" # Used in routes, ie.: /admin/collections/:slug/edit
+    label: "Post" # Used in the UI, ie.: "New Post"
+    folder: "content/blog/architure-engineering" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    fields: # The fields each document in this collection have
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "author", name: "author", widget: "string"}
+      - {label: "type", name: "type", widget: "string", required: false}
+      - {label: "url", name: "url", widget: "string", required: false}
+      - {label: "categories", name: "categories", widget: "string", required: false}
+      - {label: "Body", name: "body", widget: "markdown"} 
+  - name: "pages"
+    label: "sections"
+    files:
+      - file: "content/media-coverage/media-covearge.md"
+        label: "media coverage Page"
+        name: "media-coverage"
+        fields:
+          - {label: enable, name: active, widget: boolean, default: true}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Widget name", name: "widget", widget: "string"}
+          - {label: "weight", name: "weight", widget: "string"}
+          - label : "Media coverage Items"
+            name: "mcover"
+            widget: "list"
+            fields:
+              - {label: "Date", name: "Date", widget: "string"}
+              - {label: "Link", name: "Link", widget: "string"}
+              - {label: "Name", name: "Name", widget: "string"}
+              - {label: "Title", name: "Title", widget: "string"} 
+              - {label: "Media logo", name: "image", widget: "image"} 
+      - file: "content/intellectual-property/intel-prop.md"
+        label: "Intellectual property Page"
+        name: "intellectual-property"
+        fields:
+          - {label: enable, name: active, widget: boolean, default: true}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Widget name", name: "widget", widget: "string"}
+          - {label: "weight", name: "weight", widget: "string"}
+          - label : "IP Items"
+            name: "ip"
+            widget: "list"
+            fields:
+              - {label: "Overview", name: "Overview", widget: "string"}
+              - {label: "Patent", name: "Patent", widget: "string"}
+              - {label: "Title", name: "Title", widget: "string"}
+              - {label: "Link", name: "Link", widget: "string"} 
+      - file: "content/speaking-schedule/past-speaking-in.md"
+        label: "Speaking schedule Page"
+        name: "speaking-schedule"
+        fields:
+          - {label: enable, name: active, widget: boolean, default: true}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Widget name", name: "widget", widget: "string"}
+          - {label: "weight", name: "weight", widget: "string"}
+          - label : "Past speaking Items"
+            name: "item"
+            widget: "list"
+            fields:
+              - {label: "Date", name: "Date", widget: "string"}
+              - {label: "Link", name: "Link", widget: "string"}
+              - {label: "Logo", name: "Logo", widget: "image"}
+              - {label: "Place", name: "Place", widget: "string"} 
+              - {label: "Title", name: "Title", widget: "string"} 
+      - file: "content/speechabstracts/index.md"
+        label: "Speech abstracts Page"
+        name: "speech-abstracts"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}  
+          - {label: "Body", name: "body", widget: "markdown"}      
+      - file: "content/bios/index.md"
+        label: Bios Page
+        name: "bios"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}  
+          - {label: "Author", name: "author", widget: "string"}  
+          - {label: "Body", name: "body", widget: "markdown"}
+      - file: "content/gallery/shahidshah/gallery/index.md"
+        label: Gallery shahidshah
+        name: "shahidshah"
+        fields:
+          - {label: enable, name: active, widget: boolean, default: true}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Widget name", name: "widget", widget: "string"}
+          - {label: "weight", name: "weight", widget: "string"}
+      - file: "content/gallery/conference/gallery/index.md"
+        label: Gallery conference
+        name: "conference"
+        fields:
+          - {label: enable, name: active, widget: boolean, default: true}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Widget name", name: "widget", widget: "string"}
+          - {label: "weight", name: "weight", widget: "string"}
+      - file: "content/authors/admin/_index.md"
+        label: Home Page- About  
+        name: "about"
+        fields:
+          - {label: Name, name: name, widget: string}
+          - {label: Author, name: authors, widget: list}
+          - {label: "Role", name: "role", widget: "string"}
+          - {label: Interests, name: interests, widget: list}
+          - label: "Organisation details"
+            name: "organizations"
+            widget: "list"
+            fields:
+              - {label: "name", name: "name", widget: "string"}
+              - {label: "url", name: "url", widget: "string"}
+          - label: "Social details"
+            name: "social"
+            widget: "list"
+            fields:
+              - {label: "icon", name: "icon", widget: "string"}
+              - {label: "icon_pack", name: "icon_pack", widget: "string"}
+              - {label: "link", name: "link", widget: "string"}
+          - label: "Education details"
+            name: "education"
+            widget: "list"
+            fields:
+              - label: "Course details"
+                name: "courses"
+                widget: "list"
+                fields:
+                  - {label: "course", name: "course", widget: "string"}
+                  - {label: "institution", name: "institution", widget: "string"}
+          - {label: "Body", name: "body", widget: "markdown"}  
+      - file: "content/home/experience.md"
+        label: Home Page- Experience  
+        name: "experience"
+        fields:
+          - {label: enable, name: active, widget: boolean, default: true}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Widget name", name: "widget", widget: "string"}
+          - {label: "weight", name: "weight", widget: "string"}
+          - label : "Experience Items"
+            name: "item"
+            widget: "list"
+            fields:
+              - {label: "title", name: "title", widget: "string"}
+              - {label: "company", name: "company", widget: "string"}
+              - {label: "date_start", name: "date_start", widget: "string"}
+              - {label: "description", name: "description", widget: "string"} 
+              - {label: "clientThumb", name: "clientThumb", widget: "image"}
+      - file: "content/home/accomplishments.md"
+        label: Home Page- Recommendations  
+        name: "recommendations"
+        fields:
+          - {label: enable, name: active, widget: boolean, default: true}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Widget name", name: "widget", widget: "string"}
+          - {label: "weight", name: "weight", widget: "string"}
+          - label : "Recommendations Items"
+            name: "item"
+            widget: "list"
+            fields:
+              - {label: "organization", name: "organization", widget: "string"}
+              - {label: "organization url", name: "organization_url", widget: "string"}
+              - {label: "Name", name: "title", widget: "string"}
+              - {label: "date_start", name: "date_start", widget: "string"} 
+              - {label: "description", name: "description", widget: "string"}
+              - {label: "Image", name: "clientThumb", widget: "image"}
+      - file: "content/home/pastspeakingeng.md"
+        label: Home Page- Past Speaking Engagements  
+        name: "pastspeakingeng"
+        fields:
+          - {label: enable, name: active, widget: boolean, default: true}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Widget name", name: "widget", widget: "string"}
+          - {label: "weight", name: "weight", widget: "string"}
+          - label : "Past Speaking Items"
+            name: "item"
+            widget: "list"
+            fields:
+              - {label: "image", name: "image", widget: "image"}
+              - {label: "link", name: "link", widget: "string"}
+      - file: "content/home/contact.md"
+        label: Home Page- Contact  
+        name: "contact"
+        fields:
+          - {label: enable, name: active, widget: boolean, default: true}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Widget name", name: "widget", widget: "string"}
+          - {label: "weight", name: "weight", widget: "string"}
+      - file: "content/home/endorsements.md"
+        label: Home Page- Endorsements  
+        name: "endorsements"
+        fields:
+          - {label: enable, name: active, widget: boolean, default: true}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Widget name", name: "widget", widget: "string"}
+          - {label: "weight", name: "weight", widget: "string"}
+          - label : "Endorsements Items"
+            name: "item"
+            widget: "list"
+            fields:
+              - {label: "image", name: "image", widget: "image"}      
+      - file: "content/home/posts.md"
+        label: Home Page- Posts  
+        name: "posts"
+        fields:
+          - {label: enable, name: active, widget: boolean, default: true}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Widget name", name: "widget", widget: "string"}
+          - {label: "weight", name: "weight", widget: "string"}
+      - file: "content/home/tweets.md"
+        label: Home Page- Tweets  
+        name: "tweets"
+        fields:
+          - {label: enable, name: active, widget: boolean, default: true}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Widget name", name: "widget", widget: "string"}
+          - {label: "weight", name: "weight", widget: "string"}     
+      - file: "content/home/media-home.md"
+        label: Home Page- Media Coverage  
+        name: "media-home"
+        fields:
+          - {label: enable, name: active, widget: boolean, default: true}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Widget name", name: "widget", widget: "string"}
+          - {label: "weight", name: "weight", widget: "string"}
+          - label : "Media Items"
+            name: "feature"
+            widget: "list"
+            fields:
+              - {label: "image", name: "image", widget: "image"}          
+              - {label: "link", name: "link", widget: "string"}  
+      
