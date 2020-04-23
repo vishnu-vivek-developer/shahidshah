@@ -1,0 +1,4 @@
+baseURL = "https://devl-shahid-shah.netlify.app/"
+languageCode = "en-us"
+title = "Shahidshah"
+theme = "academic"
