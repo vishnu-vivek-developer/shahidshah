@@ -27,19 +27,19 @@ Decisions that impact implementations should be decentralized. Not knowing which
   
 is a common error in enterprise architectural departments.
   
-Lets look at some typical errors that come up in enterprise architectures.
+Let's look at some typical errors that come up in enterprise architectures.
   
 ?? Platform: Many organizations attempt to define a standard software platform, often debating
   
-endlessly between, say, Microsofts .NET, IBMs WebSphere, or BEAs WebLogic. This effort is
+endlessly between, say, Microsoft's .NET, IBM's WebSphere, or BEA's WebLogic. This effort is
   
 misplaced. Platform is an implementation decision and has no bearing on how the applications
   
-on those platforms will work together. As long as the platform meets the organizations
+on those platforms will work together. As long as the platform meets the organization's
   
 interoperability requirements, the application team should be given latitude to choose the
   
-best platform for their applications needs.
+best platform for their application's needs.
   
 ?? Data: Many organizations attempt to define a single data layer that will be shared by all
   
@@ -77,7 +77,7 @@ are far below the level of concern of applications. Applications typically make 
   
 buffering layer that is vendor specific, for example, the Windows Communications Framework
   
-layer provided by Microsofts .NET platform. The purpose of this layer is to insulate
+layer provided by Microsoft's .NET platform. The purpose of this layer is to insulate
   
 applications from needing to understand the intricacies of the Web service APIs. This buffering
   

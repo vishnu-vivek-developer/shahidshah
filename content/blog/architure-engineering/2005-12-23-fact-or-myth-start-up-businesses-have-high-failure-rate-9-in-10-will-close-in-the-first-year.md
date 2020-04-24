@@ -12,7 +12,7 @@ categories:
 ---
 [Balanko-Dickson reports][1]:
 
-> There is a myth from the 1990s that stated 9 out of 10 businesses close in their first year. The US Small Business Administration still gets calls every year from people looking for the unknown source of the 9 out of 10 sound bite. The myth persists partly due to a widely held belief that business closure is always considered a negative event.
+> There is a myth from the 1990's that stated 9 out of 10 businesses close in their first year. The US Small Business Administration still gets calls every year from people looking for the unknown source of the 9 out of 10 sound bite. The myth persists partly due to a widely held belief that business closure is always considered a negative event.
 > 
 > Dun & Bradstreet (D & B) data from the same period shows a much different picture:
 > 

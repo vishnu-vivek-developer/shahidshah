@@ -88,8 +88,10 @@
           <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
           <p>
            {{ if isset site.Params "email" }}
-             <i class="fas fa-envelope mr-1"></i>  
-             {{ site.Params.email }}
+             <a href="mailto:{{ site.Params.email }}" class="footer-contact-email">
+                <i class="fas fa-envelope mr-1"> </a></i>  
+                {{ site.Params.email }}
+             
            {{ end }}
           </p>
           <p>
@@ -117,9 +119,7 @@
             {{ else }}
             <a href="skype:ShahidNShah?call">ShahidNShah</a>
             {{ end }}
-             </p>
           </p>
-  
         </div>
         <!-- Grid column -->
   

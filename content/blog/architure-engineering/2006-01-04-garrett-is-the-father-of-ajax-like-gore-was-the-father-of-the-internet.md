@@ -12,7 +12,7 @@ I saw an ad recently for the [Real World AJAX One-day Seminar][1] and the conten
 
 However, I had a chuckle when I saw that Jesse James Garrett, who coined the phrase AJAX in [his original essay on the subject][2], was labeled as the &#8220;Father of AJAX&#8221;. I chuckled because in Jesse&#8217;s own article, he says:
 
-> Ajax isnt a technology. Its really several technologies, each flourishing in its own right, coming together in powerful new ways. Ajax incorporates:
+> Ajax isn't a technology. It's really several technologies, each flourishing in its own right, coming together in powerful new ways. Ajax incorporates:
 > 
 > * standards-based presentation using XHTML and CSS;
       

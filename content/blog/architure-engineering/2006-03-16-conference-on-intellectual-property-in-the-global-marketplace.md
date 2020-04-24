@@ -20,7 +20,7 @@ If you think the patent process is broken or would like to learn more about it, 
 > 
 > This conference will also include one-on-one consultations between the USPTO attorneys and conference attendees on Monday and Tuesday afternoons.
 > 
-> This program is part of the Federal Governments Strategy Targeting Organized Piracy (STOP) and the USPTOs continuing commitment to increase public awareness of intellectual property rights and the enforcement of those rights in the global marketplace.
+> This program is part of the Federal Government's Strategy Targeting Organized Piracy (STOP) and the USPTO's continuing commitment to increase public awareness of intellectual property rights and the enforcement of those rights in the global marketplace.
 > 
 > There is no charge to attend this event, but [seating is limited and registration is required][1].
 
