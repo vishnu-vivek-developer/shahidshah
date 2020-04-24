@@ -305,7 +305,33 @@ footer.page-footer {
     margin-bottom: 0px;
     /* padding: 0px 0px 0px; */
 }
-.footer-contact-email{
+.footer-contact-sh{
     color: #343a40 !important;
+}
+.sh-general-article{
+    font-size: 17px;
+}
+.sh-general-article h1 {
+    font-size: 28px;
+    font-weight: 600;
+}
+.sh-general-article h2 {
+    font-size: 26px;
+    font-weight: 500;
+}
+.sh-general-border{
+    background-image: linear-gradient(to right,#ccc,#ccc,#ccc);
+}
+.sh-bios-images{
+    text-align: center;
+    margin-bottom: 25px;
+}
+.sh-bios-images img{
+    height: 150px;
+    margin-top: 20px !important;
+    margin-bottom: 5px !important;
+}
+.sh-bios-img-text{
+    font-size: 15px;
 }
 /*PK 21-04-2020 VV*/

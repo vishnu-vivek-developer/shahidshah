@@ -34,18 +34,18 @@
           <p>
             <a href="https://speakerdeck.com/shah/" target="blank">Speaker Decks</a>
           </p>
-          <p>
+          <!-- <p>
             <a href="https://newsle.com/shah" target="blank">Publications</a>
-          </p>
-          <p>
+          </p> -->
+          <!-- <p>
              <a href="#!">Social Media</a>
-          </p>
+          </p> -->
           <p>
               <a href="https://www.netspective.com/netspective-tv/" target="blank">Videos</a>
           </p>
-          <p>
+          <!-- <p>
               <a href="#!">Portfolio</a>
-          </p>
+          </p> -->
         </div>
         <!-- Grid column -->
   
@@ -55,26 +55,26 @@
           <!-- Links -->
           <h6 class="text-uppercase font-weight-bold">Useful links</h6>
           <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-          <p>
+          <!-- <p>
             <a href="#!">shahid.shah.org</a>
+          </p> -->
+          <p>
+            <a href="https://www.healthcareguy.com/" target="_blank">www.HealthcareGuy.com</a>
           </p>
           <p>
-            <a href="https://www.healthcareguy.com/">www.HealthcareGuy.com</a>
+            <a href="">www.ShahidShah.com</a>
           </p>
-          <p>
-            <a href="#!">www.ShahidShah.com</a>
-          </p>
-          <p>
+          <!-- <p>
             <a href="#!">www.shahid.io</a>
-          </p>
+          </p> -->
           <p>
-            <a href="http://www.federalarchitect.com/">www.FederalArchitect.com</a>
+            <a href="http://www.federalarchitect.com/" target="_blank">www.FederalArchitect.com</a>
           </p>
-          <p>
+          <!-- <p>
             <a href="#!">www.about.me</a>
-          </p>
+          </p> -->
           <p>
-            <a href="https://speakerdeck.com/shah/">www.speakerdeck.com</a>
+            <a href="https://speakerdeck.com/shah/" target="_blank">www.speakerdeck.com</a>
           </p>
   
         </div>
@@ -88,10 +88,10 @@
           <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
           <p>
            {{ if isset site.Params "email" }}
-             <a href="mailto:{{ site.Params.email }}" class="footer-contact-email">
-                <i class="fas fa-envelope mr-1"> </a></i>  
+              <i class="fas fa-envelope mr-1"> </i>  
+              <a href="mailto:{{ site.Params.email }}" class="footer-contact-sh">
                 {{ site.Params.email }}
-             
+              </a>
            {{ end }}
           </p>
           <p>
@@ -117,7 +117,7 @@
             {{ if isset site.Params "appointment_url" }}  
                 {{ site.Params.appointment_url }}
             {{ else }}
-            <a href="skype:ShahidNShah?call">ShahidNShah</a>
+            <a href="skype:ShahidNShah?call" class="footer-contact-sh">ShahidNShah</a>
             {{ end }}
           </p>
         </div>
@@ -131,7 +131,7 @@
   
     <!-- Copyright -->
     <div class="footer-copyright text-center py-3">© {{ dateFormat "2006" now }}
-      <a href="https://mdbootstrap.com/"> www.ShahidShah.com</a>
+      <a href=""> www.ShahidShah.com</a>
       <br>
       All rights Reserved
       {{ if ne .Type "docs" }}
