@@ -1,5 +1,5 @@
 ---
-title: Bio Abstracts for publications, interviews, and speaking engagements
+title: BIOS | Bio Abstracts for publications, interviews, and speaking engagement
 author: Benson AP
 type: page
 date: 2014-03-21T13:09:08+00:00
@@ -7,6 +7,8 @@ featuredimage: img/0ShahidS7564-300x204.jpg
 description: One-liners Shahid Shah is an award-winning Government 2.0, Health IT, Medical Device Integration software expert with over [insert_php] echo $yearexp = date(&#8220;Y&#8221;) &#8211; 1990; [/insert_php] years of technology strategy, software engineering, entrepreneurship, speaking, and writing experience. Shahid Shah is an award-winning Digital Government, Cybersecurity, and Health IT expert with over [insert_php] echo $yearexp = date(&#8220;Y&#8221;) &hellip;
 ampforwp-amp-on-off:
   - default
+meta_description: "Shahid N. Shah is an internationally recognized and influential health IT expert with wide list of publications, interviews and speaking engagement in Health sector"
+focus_keywords: "Health IT expert"
 
 ---
 ## One-liners
