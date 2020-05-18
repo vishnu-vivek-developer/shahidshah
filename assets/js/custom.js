@@ -7,16 +7,17 @@ const account_id = '7a36c370-cf48-1b8c-e4be-5e9fe89e3b71';
 
 //contact form validation
 function uniqueIDGet() {
-    return ([1e7] + -1e3 + -4e3 + -8e3 + -1e11).replace(/[018]/g, c =>
-        (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16)
-    )
+    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+      var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+      return v.toString(16);
+    });
 }
 var uniqueID = uniqueIDGet();
 
 $(document).ready(function() {
     /* Event Invite Form */
-    $("#speak-schedule-form").submit(function(event) {
-        event.preventDefault();
+    $("#speak-schedule-submit-btn").click(function(event) {
+        $("#speak-schedule-form")[0].reportValidity();
         var full_name = $("#speak-schedule-name").val();
         var email = $("#speak-schedule-email").val();
         var event_name = $("#speak-schedule-event-name").val();
@@ -45,7 +46,7 @@ $(document).ready(function() {
             main_data = JSON.stringify(main_data);
         }
         if (full_name != '' && email != '' && ValidateEmail(email)) {
-            suite_crm_api_calls(main_data, 'speak-schedule-form', 'speak-schedule-submit-btn', 'sh-btn-loader', 'speak-schedule-success', 'sh-btn-text');
+            suite_crm_api_calls(main_data, 'speak-schedule-form', 'speak-schedule-submit-btn', 'sh-btn-loader', 'speak-schedule-success');
 
         } // close if no name or email
 
@@ -54,8 +55,8 @@ $(document).ready(function() {
     });
 
     /* Contact Form */
-    $("#customer-contact-form").submit(function(event) {
-        event.preventDefault();
+    $("#customer-contact-submit-btn").click(function(event) {
+        $("#customer-contact-form")[0].reportValidity();
         var customer_name = $("#customer-contact-name").val();
         var customer_email = $("#customer-contact-email").val();
         var customer_subject = $("#customer-contact-subject").val();
@@ -81,12 +82,12 @@ $(document).ready(function() {
             main_data = JSON.stringify(main_data);
         }
         if (customer_name != '' && customer_email != '' && ValidateEmail(customer_email)) {
-            suite_crm_api_calls(main_data, 'customer-contact-form', 'customer-contact-submit-btn', 'sh-btn-loader', 'customer-contact-success', 'sh-btn-text');
+            suite_crm_api_calls(main_data, 'customer-contact-form', 'customer-contact-submit-btn', 'sh-btn-loader', 'customer-contact-success');
         } // close if no name or email
 
         /* get the action attribute from the <form action=""> element */
     });
-    $("#speak-schedule-form").validate({
+   /* $("#speak-schedule-form").validate({
         messages: {
             full_name: "Please enter your name",
             event_email: "Please enter a valid email address"
@@ -97,14 +98,14 @@ $(document).ready(function() {
             name: "Please enter your name",
             email: "Please enter a valid email address"
         }
-    });
+    });*/
 });
 
-function suite_crm_api_calls(data, form_id, btn_id, loader_class, success_div_id, btn_text_id) {
+function suite_crm_api_calls(data, form_id, btn_id, loader_class, success_div_id) {
 
     $('#' + btn_id).prop('disabled', true);
     $('.' + loader_class).removeClass('sh-hide-element');
-    $('#' + btn_text_id).text('Sending...');
+    $('#' + btn_id).val('Please wait...');
     var form = new FormData();
     form.append("grant_type", grant_type);
     form.append("client_id", client_id);
@@ -158,10 +159,10 @@ function suite_crm_api_calls(data, form_id, btn_id, loader_class, success_div_id
             $.ajax(settings).done(function(response) {
                 //console.log(response);
                 if (response.meta.message != "") {
+                    $('#' + form_id)[0].submit();
                     $('#' + form_id)[0].reset();
-                    $('#' + btn_id).prop('disabled', false);
-                    $('.' + loader_class).addClass('sh-hide-element');
-                    $('#' + btn_text_id).text('Send');
+                    $('#' + btn_id).prop('disabled', false);              
+                    $('#' + btn_id).val('Send');
                     $('#' + success_div_id).removeClass('sh-hide-element');
                 }
             });
